@@ -22,21 +22,43 @@
 //= require_tree .
 
 
-        // alert($cat.prop('nodeName'));
+// alert($cat.prop('nodeName'));
 
 
 $(document).ready(function() {
 
-    $(".card").hide()
+    $(".card").hide();
 
     $(".container:eq(1) > ul:eq(0) > li").on('click', function(){
-        $(".container:eq(1) > ul:eq(0) > li").css('color', 'red');
-        var $cat = $(this).next();
-        $cat.toggle();
+        $(".card").hide();
+        $(this).next().toggle();
     });
 
+    $(".drop").hide();
+
     $("nav > div > img").on('click', function(){
-        $(".dropdown").toggle();
+        $(".drop").toggle();
+    });
+
+    $("#nav_1").on('click', function(){
+        $("#log_in").show();
+    });
+
+    $("#nav_2").on('click', function(){
+        $("#sign_up").show();
+    });
+
+    $("#nav_3").on('click', function(){
+        $("#log_out").show();
+    });
+
+    $("#nav_4").on('click', function(){
+        $("#new_task").show();
+    });
+
+
+    $(".close").on('click', function(){
+        $(".modal").hide();
     });
 
 

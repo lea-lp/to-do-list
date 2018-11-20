@@ -6,11 +6,10 @@
 @import "components/*";
 
 
-.drop {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.dropdown {
-    position: relative;
-}
+ .drop {
+    position: fixed;
+    right : 5px;
+    margin-right: 16px;
+    border: solid 2px grey;
+    width: 150px;
+ }
