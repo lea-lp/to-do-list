@@ -27,10 +27,10 @@
 
 $(document).ready(function() {
 
-    $(".card").hide();
+    $(".container:eq(1) .card").hide();
 
     $(".container:eq(1) > ul:eq(0) > li").on('click', function(){
-        $(".card").hide();
+        $(".container:eq(1) .card").hide();
         $(this).next().toggle();
     });
 
